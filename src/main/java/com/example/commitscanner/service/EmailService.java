@@ -29,16 +29,13 @@ public class EmailService {
     }
 
     // Commit bildirimi için özel mail gönderme metodu
-    public void sendCommitNotification(String author, String email, String commitHash, String message) {
-        String subject = "Suspicious Commit Detected";
-        String body = "Hello " + author + ",\n\n" +
-                "A potentially problematic commit was detected:\n\n" +
-                "Commit ID: " + commitHash + "\n" +
-                "Message: " + message + "\n\n" +
-                "Please double-check this commit.\n\n" +
-                "Regards,\nCommitScanner Bot";
-
-        sendSimpleEmail(email, subject, body);
+    public void sendCommitNotification(String toEmail, String subject, String body) {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(toEmail);
+        message.setSubject(subject);
+        message.setText(body);
+        mailSender.send(message);
     }
+
 
 }

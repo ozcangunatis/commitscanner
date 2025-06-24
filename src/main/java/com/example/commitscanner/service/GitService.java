@@ -75,5 +75,19 @@ public class GitService {
         }
         return null;
     }
+    public String getLastCommitDiff() {
+        try {
+            ProcessBuilder pb = new ProcessBuilder(
+                    "git", "-C", "C:/git/evam-repo", "show", "--pretty=", "--no-color"
+            );
+            Process process = pb.start();
+
+            java.io.InputStream is = process.getInputStream();
+            return new String(is.readAllBytes());
+        } catch (Exception e) {
+            return "Could not get diff: " + e.getMessage();
+        }
+    }
+
 }
 
