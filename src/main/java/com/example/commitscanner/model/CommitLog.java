@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CommitLog {
     private String commitId;
-    privat String authorName;
+    private String authorName;
     private String authorEmail;
     private String commitDate;
     private String message;
