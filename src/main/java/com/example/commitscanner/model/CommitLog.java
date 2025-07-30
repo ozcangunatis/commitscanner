@@ -6,10 +6,11 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class CommitLog {
     private String commitId;
     private String authorName;
-    private String authorEmail;
+    priva String authorEmail;
     private String commitDate;
     private String message;
 }
