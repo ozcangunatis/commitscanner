@@ -5,12 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
+@NoArgsConstru
 @AllArgsConstructor
 public class CommitLog {
     private String commitId;
     private String authorName;
-    priva String authorEmail;
+    private String authorEmail;
     private String commitDate;
     private String message;
 }
