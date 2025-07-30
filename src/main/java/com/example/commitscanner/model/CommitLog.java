@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstru
+@NoArgsConstructor
 @AllArgsConstructor
 public class CommitLog {
     private String commitId;
