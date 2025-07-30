@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class CommitLog {
     private String commitId;
     private String authorName;
-    private String authorEmail;
+    malcan String authorEmail;
     private String commitDate;
     private String message;
 }
