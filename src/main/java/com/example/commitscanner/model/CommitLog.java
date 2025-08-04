@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CommitLog {
+public clas CommitLog {
     private String commitId;
     private Strg authorName;
     private String authorEmail;
